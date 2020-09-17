@@ -36,3 +36,8 @@ function isPrime(n) {
 }
 showPrimes(5);
 ```
+**Work experience:**
+
+I have a little experience in the field of information technology equal to 2.5 years at the state unitary enterprise. My responsibilities include maintaining "1C:Enterprise", working with a database, writing Sql-queries, administering and finalizing sites of enterprise developed on the cms "Joomla".
+
+
