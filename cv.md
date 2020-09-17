@@ -40,4 +40,15 @@ showPrimes(5);
 
 I have a little experience in the field of information technology equal to 2.5 years at the state unitary enterprise. My responsibilities include maintaining "1C:Enterprise", working with a database, writing Sql-queries, administering and finalizing sites of enterprise developed on the cms "Joomla".
 
+**Education:**
+
+* **Belarusian State University** (2018-2020) qualification: **programmer-web-designer**, specialty: web-design and computer graphics
+* **Belarusian State University** (2012-2017) qualification: designer, specialty: communicative design
+* Website for an online clothing store on cms Joomla on byself template and using the JoomShopping component (<http://b29582ex.beget.tech/>)
+* courses Java Standard Edition, Enterprise Edition
+
+**English language:** B1
+
+***
+
 
