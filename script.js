@@ -6,6 +6,7 @@ const resultBtn = document.getElementById('result');
 const clearBtns = document.querySelectorAll('.clear-btn');
 
 const display = document.getElementById('display');
+
 let MemoryCurrentNumber = 0;
 let MemoryNewNumber = false;
 let MemoryPendingOperation = '';
@@ -13,12 +14,16 @@ let MemoryPendingOperation = '';
 
 for (let i = 0; i < numbers.length; i++) {
     let number = numbers[i];
-    number.addEventListener('click', numberPress);
-}
+    number.addEventListener('click', function(e) {
+        numberPress(e.target.textContent);
+    });
+};
 
 for (let i = 0; i < operations.length; i++) {
-    let operation = operations[i];
-    operation.addEventListener('click', operation);
+    let operationBtn = operations[i];
+    operationBtn.addEventListener('click', function(e) {
+        operation(e.target.textContent);
+    });
 }
 
 for (let i = 0; i < clearBtns.length; i++) {
@@ -27,22 +32,31 @@ for (let i = 0; i < clearBtns.length; i++) {
         // console.log(e.srcElement.id);
         clear(e.srcElement.id);
         //console.log('клик по кнопке ce или с');
+        numberPress(e.target.textContent);
     });
 }
-
-
-
 
 decimalBtn.addEventListener('click', decimal);
 
 resultBtn.addEventListener('click', result);
 
-function numberPress() {
-    console.log('клик по кнопке с номером');
+function numberPress(number) {
+    if (display.value === '0') {
+        display.value = number;
+    } else {
+        display.value += number; //прилипание всех вводимых чисел
+    }
+    //console.log('клик по кнопке с номером' + number);
+
 };
 
-function operation() {
-    console.log('клик по кнопке с операцией');
+function operation(op) {
+    if (MemoryNewNumber) {
+        display.value = MemoryCurrentNumber;
+    } else {
+        MemoryCurrentNumber = true;
+    }
+    console.log('клик по кнопке с операцией ' + op);
 };
 
 function clear(id) {
@@ -53,9 +67,9 @@ function decimal() {
     console.log('клик по кнопке с decimalBtn');
 };
 
-function result() {
+/*function result() {
     console.log('клик по кнопке с resultBtn');
-};
+};*/
 
 
 
