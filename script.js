@@ -74,6 +74,14 @@ function operation(op) {
             MemoryCurrentNumber *= parseFloat(localOperationMemory);
         } else if (MemoryPendingOperation === '/') {
             MemoryCurrentNumber /= parseFloat(localOperationMemory);
+        } else if (MemoryPendingOperation === '√x') {
+            //MemoryCurrentNumber = Math.sqrt(parseFloat(localOperationMemory));
+            //MemoryCurrentNumber += Math.sqrt(localOperationMemory);
+            let local = parseFloat(localOperationMemory);
+            local = Math.sqrt(local);
+            MemoryCurrentNumber = local;
+        } else if (MemoryPendingOperation === '(x)*n') {
+            MemoryCurrentNumber /= parseFloat(localOperationMemory);
         } else {
             MemoryCurrentNumber = parseFloat(localOperationMemory);
         };

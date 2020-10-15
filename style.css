@@ -64,12 +64,26 @@ body {
     transform: translateY(-1px);
 }
 
+
+/*
 .btn-long {
     width: 183px;
 }
+*/
 
+
+/*
 .btn-equal {
     height: 145px;
+}
+*/
+
+#exponentiation {
+    text-transform: lowercase;
+}
+
+#squareRootExtraction {
+    text-transform: lowercase;
 }
 
 input,
@@ -109,9 +123,11 @@ button {
     .btn {
         width: 64px;
     }
+    /*
     .btn-long {
         width: 140px;
     }
+    */
 }
 
 @media screen and (max-width: 400px) {
@@ -124,7 +140,8 @@ button {
     .btn {
         width: 60px;
     }
+    /*
     .btn-long {
         width: 132px;
-    }
+    }*/
 }
