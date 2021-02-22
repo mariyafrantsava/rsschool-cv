@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    /*flex-direction: column;*/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background-size: cover;
+    color: #000000;
+    transition: background-image 1s ease-in-out;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 145rem;
+    min-width: 10rem;
+}
+
+.content__sectionFirst {
+    display: flex;
+    flex-direction: column;
+}
+
+.content__sectionSecond {
+    display: flex;
+    flex-direction: column;
+}
+
+.content__sectionThird {
+    display: flex;
+    margin: 1rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+#time {
+    font-size: 8rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+#dayWeekDateMonth {
+    font-size: 3rem;
+}
+
+h1 {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 700px) {
+    #time {
+        font-size: 6rem;
+    }
+}
+
+.btn {
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 0;
+    background: url("https://www.pngarts.com/files/7/Update-Button-PNG-Image.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: grayscale(0.3);
+    margin: 2rem;
+}
+
+.btn:hover {
+    filter: contrast(100%);
+}
+
+.btn:active,
+.btn:focus {
+    outline: 0;
+}
+
+.btn:active {
+    transform: scale(1.02)
+}
+
+
+/* quote */
+
+.quote {
+    /*font: 1.2rem Georgia, serif;*/
+    font-size: 1.3rem;
+    margin: 0;
+    background: #00000094;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: solid 0.2rem #fff;
+}
+
+.quote figcaption,
+.quote blockquote {
+    margin: 1rem;
+}
+
+.quote figcaption {
+    text-align: right;
+}
+
+.btn_quote {
+    width: 7.8rem;
+    height: 3rem;
+    border: 0;
+    background: url("../assets/images/Update-Button-PNG-Image-Transparent.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*filter: grayscale(1);*/
+    margin: 2rem;
+}
+
+.btn_quote:hover {
+    filter: contrast(150%);
+}
+
+.btn_quote:active,
+.btn_quote:focus {
+    outline: 0;
+}
+
+.btn_quote:active {
+    transform: scale(1.02)
+}
+
+.content__sectionSecond-quote {
+    display: flex;
+    max-width: 70rem;
+    margin: 3rem;
+    align-items: center;
+}
+
+
+/*weather*/
+
+.city {
+    width: 8.5rem;
+    padding: 1rem 0;
+    margin: 2rem auto;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.temperature {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.weather-description {
+    width: 8.5rem;
+    margin: 2rem auto;
+    font-size: 1.5rem;
+    padding: 1.2rem 0;
+    color: #ffffff;
+    background-color: #44aadd;
+    border-radius: 0.5rem;
+}
+
+.airHumidity {
+    width: 8.5rem;
+    margin: 2rem auto;
+    font-size: 1.5rem;
+    padding: 1.2rem 0;
+    color: #ffffff;
+    background-color: #44aadd;
+    border-radius: 0.5rem;
+}
+
+.windSpeed {
+    width: 8.5rem;
+    margin: 2rem auto;
+    font-size: 1.5rem;
+    padding: 1.2rem 0;
+    color: #ffffff;
+    background-color: #44aadd;
+    border-radius: 0.5rem;
+}
+
+.weather-icon {
+    font-size: 10rem;
+    color: #44aadd;
+}
+
+.weather-icon:hover {
+    animation: shake 1.5s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0.1rem, 0.1rem) rotate(0deg);
+    }
+    10% {
+        transform: translate(-0.1rem, -0.2rem) rotate(-1deg);
+    }
+    30% {
+        transform: translate(0.3rem, 0.2rem) rotate(0deg);
+    }
+    50% {
+        transform: translate(-0.1rem, 0.2rem) rotate(-1deg);
+    }
+    70% {
+        transform: translate(0.3rem, 0.1rem) rotate(-1deg);
+    }
+    90% {
+        transform: translate(0.1rem, 0.2rem) rotate(0deg);
+    }
+}
+
+.qwe {
+    display: flex;
+    justify-content: center;
+}
+
+.qwe1 {
+    display: flex;
+    margin-right: 1rem;
+}
+
+.qwe2 {
+    display: flex;
+    min-width: 5rem;
+}

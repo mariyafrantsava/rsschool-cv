@@ -1,0 +1,363 @@
+$main-color: white;
+
+.trips-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  margin: 4rem;
+  height: 80%;
+
+  .card.small {
+    height: 32rem;
+  }
+  .card-content {
+    font-size: 1.6rem;
+    padding: 1rem 2rem !important;
+    max-height: 60% !important;
+  }
+  .card-action {
+    font-size: 1.6rem;
+    padding: 2rem;
+  }
+  .new-trip-btn {
+    position: fixed;
+    right: 28rem;
+    bottom: 11%;
+    z-index: 1;
+  }
+  .submit-btn {
+    margin: 10px;
+  }
+  .no-trips {
+    grid-column: span 3;
+    justify-self: center;
+    background-color: #ffffff;
+    width: 42.5rem;
+    height: 37rem;
+    padding: 1.5rem;
+    margin: auto;
+    transform: rotate(-6deg);
+
+    .no-trips-image {
+      width: 100%;
+    }
+    .no-trips-title {
+      font-size: 2rem;
+      margin: 1rem;
+    }
+  }
+}
+.trip-details {
+  color: #ffffff;
+
+  .back-btn,
+  .options-btn {
+    position: absolute;
+    width: 36px;
+    text-align: center;
+    padding: 0;
+    top: 10px;
+
+    .material-icons {
+      font-size: 2.4rem;
+    }
+  }
+  .back-btn {
+    left: 1rem;
+  }
+  .options-btn {
+    right: 1rem;
+
+    .btn {
+      width: 36px;
+      text-align: center;
+      padding: 0;
+    }
+    .drop-content {
+      display: none;
+      position: absolute;
+      top: 4.5rem;
+      right: 0;
+      font-size: 1.6rem;
+      border-radius: 0.5rem;
+      background-color: #ffa000e7;
+      width: max-content;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+      .tooltip {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: -0.5rem;
+        right: 1.3rem;
+        transform: rotate(45deg);
+        background-color: #ffa000e7;
+        z-index: 1
+      }
+      .drop-option {
+        position: relative;
+        padding: 1.5rem;
+        user-select: none;
+        border-radius: 0.5rem;
+        z-index: 2;
+      }
+      .drop-option:hover {
+        cursor: pointer;
+        background-color: #ffffff4f;
+      }
+    }
+    .show {
+      display: block;
+    }
+  }
+  .destination-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    padding: 0.5rem 3rem;
+    gap: 3rem;
+    
+    .trip-details-header,
+    .trip-details-buttons,
+    .pagination {
+      grid-column: span 3;
+    }
+    .trip-details-header {
+      display: grid;
+      background-color: #ffab00;
+      width: 85%;
+      margin: 0 auto;
+      border-radius: 2.5rem 0;
+      padding-bottom: 0.8rem;
+
+      .trip-title {
+        font-size: 4rem;
+        grid-column: span 2;
+      }
+      .trip-destination {
+        font-size: 2rem;
+        line-height: 2rem;
+      }
+      .trip-date {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+      }    
+    }
+    .trip-icon {
+      display: grid;
+      justify-content: center;
+      width: 15rem;
+      justify-self: center;
+      align-self: end;
+      font-size: 2rem;
+      background-image: url('../assets/images/paper-1074131_640.jpg');
+      padding: 2rem;
+      border-radius: 2.5rem 0;
+      user-select: none;
+      margin: 0;
+
+      img {
+        width: 100%;
+        max-width: 5rem;
+        justify-self: center;
+      }
+    }
+    .trip-icon:hover {
+      cursor: pointer;
+    }
+  }
+  .pagination {
+    background-color: rgba($color: #272142, $alpha: 0.7);
+    text-align: center;
+    margin: 2rem auto;
+    width: max-content;
+    border-radius: 16px;
+
+    li.active {
+      background-color:  #ffab00;
+    }
+    a {
+      color: #ffffff;
+
+      .material-icons {
+        height: 100%;
+        line-height: 30px;
+      }
+    }
+  }
+  .trip-details-buttons {
+    text-align: center;
+
+    button {
+      margin: 0 2rem;
+    }
+  }
+}
+.important-container {
+  display: flex;
+  height: 100%;
+
+  .back-btn {
+    position: absolute;
+    width: 3.6rem;
+    text-align: center;
+    padding: 0;
+    top: 1rem;
+    left: 1rem;
+  }
+}
+.important-photo {
+  background-color: #ffffff;
+  padding: 1rem;
+  margin: auto;
+  width: 55rem;
+}
+.important-img {
+  width: 100%;
+}
+.important-description {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+@media (min-width: 1536px) {
+  .trips-container {
+    gap: 6rem;
+    margin: 4rem;
+
+    .card.small {
+      max-width: 42rem;
+      height: 35rem;
+      justify-self: center;
+    }
+  }
+  .trip-details .destination-details .trip-icon {
+    width: 23rem;
+
+    img {
+      width: 100%;
+      max-width: 10rem;
+      justify-self: center;
+    }
+  }
+  .trip-details .pagination {
+    margin: 3rem auto;
+  }
+  .important-photo {
+    width: 60rem;
+  }
+  .important-description {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1279px) {
+  .trips-container {
+      gap: 2rem;
+      margin: 2rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .main {
+    grid-template-columns: 10rem 1fr 22rem !important ;
+  }
+  .trips-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    margin: 4rem;
+  }
+  .trip-details .destination-details .trip-icon {
+    width: 11rem;
+    font-size: 1.6rem;
+
+    img {
+      width: 100%;
+      max-width: 3rem;
+      justify-self: center;
+    }
+  }
+  .trip-details .trip-details-buttons button {
+    margin: 0 0.5rem;
+  }
+  .important-photo {
+    width: 50rem;
+  }
+  .important-description {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 940px) {
+  .main {
+    grid-template-columns: 10rem 1fr 20rem !important ;
+  }  
+  .trips-container .no-trips {
+    width: 40rem;
+    height: 35rem;
+  }
+  .trip-details {
+    .trip-details-buttons button {
+      margin: 0.5rem;
+    }
+    .destination-details {
+      gap: 1.5rem;
+
+      .trip-details-header .trip-title {
+        font-size: 2.6rem;
+      }
+    }
+    .pagination {
+      margin: 1rem auto;
+    }
+  }
+  .important-photo {
+    width: 36rem;
+  }
+  .important-description {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 879px) {
+  .trips-container .no-trips {
+    width: 35rem;
+    height: 32rem;
+  }
+  .trip-title {
+    grid-column: span 1 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .trips-container {    
+    .new-trip-btn {
+      right: 3.5rem;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .trips-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    margin: 4rem;
+
+    .no-trips {
+      width: 25rem;
+      height: 30rem;
+    }
+    .card.small {
+      max-width: 42rem;
+      // height: 35rem;
+      justify-self: center;
+      max-width: 35rem;
+    }
+  }
+  .important-photo {
+    width: 30rem;
+  }
+  .important-description {
+    font-size: 1.6rem;
+  }
+}

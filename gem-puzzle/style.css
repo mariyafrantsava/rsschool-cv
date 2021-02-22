@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  font-family: "Ubuntu", Arial, sans-serif;
+}
+header {
+  min-height: 75px;
+  max-width: 430px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+.game-board {
+  display: grid;
+  position: relative;
+  margin: auto;
+  max-width: 420px;
+  grid-gap: 2px;
+  background: #fdb76c;
+  padding: 2px;
+  border: 1px solid #444;
+  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+}
+
+.game-board > *:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+.game-board-main3,
+.game-board-main4,
+.game-board-main5,
+.game-board-main6,
+.game-board-main7,
+.game-board-main8 {
+  grid-auto-rows: 1fr;
+}
+
+.game-board-main3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.game-board-main4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.game-board-main5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.game-board-main6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.game-board-main7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.game-board-main8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.chip {
+  border: 1px solid #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background: rgb(228, 228, 228);
+  user-select: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.game-board::before {
+  content: "";
+  width: 0;
+  padding-bottom: 100%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+.chip:hover {
+  cursor: pointer;
+  background: rgb(224, 212, 212);
+  box-shadow: 0px 0px 20px #000000;
+}
+
+header button {
+  display: none;
+}
+
+header button.visible {
+  display: block;
+}
+button.pause {
+  background: none;
+  border: none;
+  font-size: 100%;
+  cursor: pointer;
+  outline: none;
+}
+.startGame {
+  min-height: 75px;
+  max-width: 430px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.start {
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: rgb(228, 228, 228);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  color: #c96f0f;
+}
+.start:hover {
+  background-color: rgb(224, 212, 212);
+}
+.divChangeSize {
+  min-height: 75px;
+  max-width: 430px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 1.3rem;
+}
+select {
+  font-size: 1.3rem;
+  margin-left: 0.7rem;
+}

@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 10px;
+  background-color: #212529;
+  width: 100%;
+}
+.app__right {
+  background-color: darkgray;
+}
+
+.app__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  /* background-color: dimgrey; */
+}
+
+.app__left {
+  flex: 0.9;
+}
+
+.app__stats {
+  display: flex;
+  justify-content: space-between;
+  background-color: dimgray;
+  color: darkgray;
+}
+
+@media (max-width: 990px) {
+  .app {
+    flex-direction: column;
+  }
+}
+.MuiCard-root {
+  background-color: #212529;
+  overflow: hidden;
+}
+.MuiPaper-root {
+  background-color: #212529 !important;
+}
+.MuiInputBase-input {
+  color: aliceblue !important;
+}
+
+.h3,
+h3 {
+  color: aliceblue;
+}
+.MuiTypography-colorTextSecondary {
+  color: aliceblue !important;
+}
+.col,
+[class*="col-"] {
+  border: none !important;
+  display: block;
+}
+/* .col-lg-9, .col-md-12 {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+} */
+
+.app .MuiPaper-elevation1 {
+  box-shadow: none;
+}
+.MuiButtonBase-root {
+  background-color: blueviolet;
+  color: aliceblue !important;
+}

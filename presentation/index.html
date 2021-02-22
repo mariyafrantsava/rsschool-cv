@@ -1,0 +1,445 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<meta name="description" content="Inheritance in Javascript">
+	<meta name="author" content="Mariya Frantsava">
+	<title>Inheritance in Javascript</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/overrides.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Inheritance in Javascript</h2>
+				<p style="font-size: .8em;">by <a href="https://github.com/mariyafrantsava" target="blank">Mariya
+						Frantsava
+						(mariyafrantsava)</a>
+				</p>
+			</section>
+			<section>
+				<h5>Inheritance is...</h5>
+				<p>a mechanism in which one class acquires the property of another class.</p>
+				<img data-src='img/animal.png'>
+			</section>
+			<section>
+				<section>
+					<h2>why and for what you need inheritance:</h2>
+					<ul>
+						<li>allows you to extend properties of objects</li>
+						<li>reuse the properties and methods of an existing object</li>
+						<li><span class="-highlight"> => allows you to do the above without duplicating code</span></li>
+					</ul>
+					<img data-src='img/hqdefault.jpg'">
+				</section>
+				<section>
+					<h5>Inheritance example</h5>
+					<img data-src='img/animalEx.png' style=" min-width: 115%; min-height: 115%; margin: 0;">
+					<p style=" font-size: 1.2rem; display: flex; justify-content: space-around;">
+						<span class="-highlight">without inheritanse</span>
+						<span class="-highlight">with inheritanse</span>
+					</p>
+				</section>
+				<!-- <section>
+					<pre class="minimal-code"><code>
+class Food {
+	constructor(name, taste, weight) {
+		this.name = name;
+		this.taste = taste;
+		this.weight = weight;
+	}
+	showInfo() {
+		return `Food: ${this.name}, ${this.taste},
+						 ${this.weight}`;
+	}
+}
+					</pre></code>
+					<pre class="fragment minimal-code" data-fragment-index="0"><code>
+class Orange extends Food {
+	taste() {
+		alert(`Tasty and sweet ${this.name}`);
+	}
+}
+					</pre></code>
+					<pre class="fragment minimal-code" data-fragment-index="1"><code>
+let orange = new Orange("Hawaiian's orange", "sweet", "100mg");
+orange.showInfo(); // Food: Hawaiian's orange, sweet, 100mg
+orange.taste(); // Tasty and sweet orange
+
+let tomato = new Food("Tomato green cherry", "bitter", "50mg");
+tomato.showInfo(); // Food: Tomato green cherry, bitter, 50mg
+					</pre></code>
+				</section> -->
+				<section>
+					<h3>an important nuance of inheritance: </h3>
+					<p>if the parent object changes, then all inherited objects change. In the worst case, this can lead
+						to broken code.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Inheritance</h2>
+					<h4 class="fragment"
+						style="display: flex; justify-content: space-around; align-items: center; width: 30rem;">
+						<span class="-highlight">Classical</span>
+						<img class="noBorderIcon" data-src='img/71px-ISO_C++_Logo.svg.png'>
+						<img class="noBorderIcon" data-src='img/150px-C_Sharp_logo.svg.png'
+							style=" width: 80px; height:80px">
+						<img class="noBorderIcon" data-src='img/43px-Java_logo.svg.png'>
+					</h4>
+					<ul>
+						<li class="fragment">classes inherit from classes</li>
+						<li class="fragment">and create subclass relationships: hierarchical class taxonomies</li>
+					</ul>
+					<h4 class="fragment"
+						style="display: flex; justify-content: space-around; align-items: center; width: 62rem;">
+						<span class="-highlight">Prototypal</span>
+						<img class="noBorderIcon" data-src='img/196px-Self-logo.svg.png'>
+						<img class="noBorderIcon" data-src='img/80px-Lua-Logo.svg.png'>
+						<img class="noBorderIcon" data-src='img/80px-Io-logo.svg.png'>
+						<img class="noBorderIcon" data-src='img/Rebol_logo.png'>
+						<img class="noBorderIcon" data-src='img/80px-Unofficial_JavaScript_logo_2.svg.png'>
+					</h4>
+					<ul>
+						<li class="fragment">A prototype is a working object instance</li>
+						<li class="fragment">Objects inherit directly from other objects</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h4>let's highlight two directions of js inheritance...</h4>
+					<ul>
+						<li><span class="-highlight">Prototyping</span> way</li>
+						<li>Class inheritance as syntactic sugar(ES6)</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Prototyping</h2>
+					<p>All objects in JavaScript inherit from at least another object. The object that inherits from is
+						called the prototype, and inherited properties can be found in the prototype object of the
+						constructor.</p>
+				</section>
+				<section>
+					<pre class="minimal-code"><code>
+let animal = {
+	eats: true
+	};
+	</pre></code>
+					<pre class="fragment minimal-code" data-fragment-index="0"><code>
+let dog = {
+	jumps: true
+	};
+	</pre></code>
+					<pre class="fragment minimal-code" data-fragment-index="1"><code>
+dog.__proto__ = animal;
+	</pre></code>
+					<pre class="fragment minimal-code" data-fragment-index="2"><p>
+The __proto__ property is a historically conditioned getter / setter for [[Prototype]].
+	</pre>
+					</p>
+					<pre class="fragment minimal-code" data-fragment-index="3"><code>
+// now we can find both properties in dog:
+alert (dog.eats); // true
+alert (dog.jumps); // true
+	</pre></code>
+					<pre class="fragment minimal-code" data-fragment-index="4"><p>
+=> "animal is the prototype of dog" or "dog is prototypical from animal"
+	</pre>
+					</p>
+				</section>
+				<section>
+					<pre class="minimal-code"><code>
+let animal = {
+	eats: true,
+	walk() {
+		alert("Animal walk");
+	  };
+	};
+	</pre></code>
+					<pre class="fragment minimal-code" data-fragment-index="0"><code>
+// walk is taken from prototype
+dog.walk(); // Animal walk
+	</pre></code>
+				</section>
+				<section>
+					<pre class="minimal-code">
+<h4><span class="-highlight">Prototype chain:
+	</pre>
+					</span></h4>
+					<pre class="fragment minimal-code" data-fragment-index="0"><code>
+let animal = {
+	eats: true,
+	walk () {
+		alert ("Animal walk");
+	}
+	};
+
+let dog = {
+jumps: true,
+__proto__: animal
+};
+
+let cockerSpaniel = {
+earLength: 15,
+__proto__: dog
+};
+	</pre></code>
+					<pre class="fragment minimal-code" data-fragment-index="1"><code>
+// walk is taken from the prototype chain
+cockerSpaniel.walk (); // Animal walk
+alert (cockerSpaniel.jumps); // true (from dog)
+	</pre></code>
+				</section>
+				<section>
+					<h2>get/set</h2>
+					<pre class="minimal-code"><code>
+let animal = {
+	color: "brown",
+	kindPet: "cocker-spaniel",
+
+	set fullKindPet(value) {
+		[this.color, this.kindPet] = value.split(" ");
+	},
+
+	get fullKindPet() {
+		return `${this.color} ${this.kindPet}`;
+	}
+};
+</pre></code>
+					<pre class="fragment minimal-code" data-fragment-index="0"><code>
+let dog = {
+	__proto__: animal,
+	isAdmin: true
+};
+
+alert(dog.fullKindPet); // brown cocker-spaniel
+	</pre></code>
+					<pre class="fragment minimal-code" data-fragment-index="1"><code>
+// run set	dog.fullKindPet = "black&white dalmatian";
+		alert(dog.color); // black&white
+		alert(dog.kindPet); // dalmatian
+	</pre></code>
+				</section>
+				<section>
+					<h3>Important thing in inheritance with prototype chain</h3>
+					<h4><span class="-highlight">When trying to access any property of an object -></span></h4>
+					<ul>
+						<li>looked for in the object itself <span class="-highlight"> -> </span></li>
+						<li>in the object's prototype <span class="-highlight"> -> </span></li>
+						<li>in the prototype's prototype <span class="-highlight"> -> </span></li>
+						<li>finish when found or last object = null</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Performance</h2>
+					<p>Long search times for properties located relatively high up the prototype chain can negatively
+						impact performance.</p>
+					<p><span class="-highlight">hasOwnProperty </span>is the only ability in JavaScript to work with
+						properties without affecting the prototype chain.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<pre class="minimal-code">
+				<h3>Creating objects with the <span class="-highlight">constructor</span>
+	</pre>
+					</h3>
+					<pre class="fragment minimal-code" data-fragment-index="0"><code>
+//first variant
+function Person(name, age) {
+	this.name = name;
+	this.age = age;
+	}
+
+function Employee(name, age, title) {
+	this.title = title;
+	Person.call(this, name, age);
+	this.__proto__.constructor = Person;
+}
+
+let employee = new Employee('Joe', 20, 'waiter');
+console.log(employee);
+	</pre></code>
+				</section>
+				<section>
+					<pre class="minimal-code"><code>
+//second variant
+function Graph () {
+	this.vertexes = [];
+	this.edges = [];
+}
+ 
+ Graph.prototype = {
+	addVertex: function (v) {
+	  this.vertexes.push (v);
+	}
+}
+ 
+var g = new Graph ();
+// the 'g' object has its own 'vertexes' and 'edges' properties.
+// g. [[Prototype]] is set to Graph.prototype 
+//when new Graph () is executed.
+	</pre></code>
+				</section>
+			</section>
+			<section>
+				<pre class="minimal-code">
+<h3>Object.create()
+	</pre>
+				</h3>
+				<pre class="fragment minimal-code" data-fragment-index="0">
+<p style="margin: 0;">The Object.create() method is another way to inherit</p>
+<p style="margin: 0;">from a prototype when we create an object.
+	</pre>
+				</p>
+				<pre class="fragment minimal-code" data-fragment-index="1"><code>
+const person = {
+	name: 'Joe',
+	age: 20
+	}
+	let employee = Object.create(person);
+	employee.title = 'waiter';
+	console.log(employee);
+	</pre></code>
+			</section>
+			<section>
+				<pre class="minimal-code">
+<h3>Object.defineProperty()
+	</pre>
+				</h3>
+				<pre class="fragment minimal-code" data-fragment-index="0">
+<p>We can also use this defineProperty() method to set the prototype of an object.
+	</pre>
+				</p>
+				<pre class="fragment minimal-code" data-fragment-index="1"><code>
+const person = {
+name: 'Joe',
+age: 20
+}
+let employee = {
+title: 'waiter'
+};
+Object.defineProperty(employee, '__proto__', {
+value: person
+});
+console.log(employee.__proto__);
+				</pre></code>
+			</section>
+			<section>
+				<section>
+					<pre class="minimal-code">
+<h3>Class inheritance with <span class="-highlight">"extends"</span>
+</pre>
+					</h3>
+					<pre class="fragment minimal-code" data-fragment-index="0">
+<p style="margin: 0;">With the release of ECMAScript 6, there is a whole bunch of keywords that implement classes.</p>
+<p style="margin: 0;">The new keywords are "class", "constructor", "static", "extends", and "super".</p>
+</pre>
+					</p>
+					<pre class="fragment minimal-code" data-fragment-index="1"><code>
+class Person {
+	constructor(name, age) {
+		this.name = name;
+		this.age = age;
+	}
+	}
+	class Employee extends Person {
+	constructor(name, age, title) {
+		super(name, age);
+		this.title = title;
+	}
+	}
+	const employee = new Employee('Joe', 20, 'waiter');
+	</pre></code>
+				</section>
+				<section>
+					<pre class="minimal-code">
+<h3>Did before:
+	</pre>
+					</h3>
+					<pre class="fragment minimal-code" data-fragment-index="0"><code>
+function Person(name, age) {
+this.name = name;
+this.age = age;
+}
+function Employee(name, age, title) {
+this.title = title;
+Person.call(this, name, age);
+this.__proto__.constructor = Person;
+}
+let employee = new Employee('Joe', 20, 'waiter');
+console.log(employee);
+	</pre></code>
+				</section>
+			</section>
+
+			<section>
+				<h2>conclusions</h2>
+				<ul style="font-size: 2rem;">
+					<li>When writing JavaScript code that uses inheritance, be aware of the length of the prototype
+						chains and try to keep them as short as possible to avoid performance issues at runtime.
+					</li>
+					<li>The only justification for extending basic prototypes can be polyfills - emulators of new
+						functionality (for example, Array.forEach) for language implementations that do not support it
+						in old web browsers.</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Thanks</h2>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			slideNumber: true,
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			history: true,
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
+</html>

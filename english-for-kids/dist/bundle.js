@@ -1,0 +1,1 @@
+(()=>{const o=new Post("Webpack Post Title");console.log("Post to String:",o.toString())})();

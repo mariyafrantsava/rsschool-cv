@@ -1,0 +1,596 @@
+    .wrapper {
+        height: 744px;
+        width: 1600px;
+        margin: 0 auto;
+        /* background-color: red; */
+        /* padding: 22px 0; */
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    }
+    
+    .wrapperDot {
+        background: url(./assets/bg-image.png);
+        height: 744px;
+        width: 1600px;
+        /* padding: 22px 0;     */
+    }
+    
+    .navbar ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .navbar ul li a {
+        display: flex;
+        height: 44px;
+        color: #FFFFFF;
+        opacity: 0.8;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration: none;
+    }
+    
+    .navbar ul li a:hover {
+        opacity: 1.0;
+    }
+    
+    .textLineAbout {
+        border-bottom: 1px solid #FFFFFF;
+        padding: 3px 0;
+    }
+    
+    .textLineAbout:hover {
+        border-bottom: 1px solid #FFFFFF;
+        padding: 3px 0;
+        cursor: pointer;
+    }
+    
+    .textLine:hover {
+        border-bottom: 1px solid #FFFFFF;
+        padding: 3px 0;
+        cursor: pointer;
+    }
+    
+    .navbar {
+        /*  width: 583px;
+    padding: 38px 31.8% 0 31.8%;*/
+        /* width: 1600px;
+    height: 95px;
+    padding: 22.5px 31.8% 22.5px 31.8%; */
+        width: 583px;
+        height: 95px;
+        margin: 0px 502.5px;
+        padding: 25px 0 0 0;
+    }
+    
+    .logo {
+        margin: 0 15px;
+    }
+    
+    .life {
+        color: #FFFFFF;
+        text-align: center;
+        letter-spacing: 4.5px;
+        text-transform: uppercase;
+        margin: 109px auto 0;
+        width: fit-content;
+    }
+    
+    .life h2 {
+        font-family: Roboto, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 75px;
+    }
+    
+    .lifeWhatever {
+        text-align: center;
+        margin: 20px auto;
+        width: 504px;
+    }
+    
+    .lifeWhatever h2 {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    
+    .getStarted a button {
+        width: 186px;
+        height: 46px;
+        padding: 15px 46px;
+        background: #00AFDB;
+        margin: 30px auto 0;
+        border: none;
+    }
+    
+    .getStarted button p {
+        font-family: Roboto, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+    }
+    
+    .getStarted button {
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .getStarted button:hover {
+        background: #009CC2;
+        cursor: pointer;
+    }
+    
+    .getStarted a {
+        text-decoration: none;
+    }
+    
+    .social {
+        width: 170px;
+        margin: 184px 713px 0;
+    }
+    
+    .social ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .social ul li a {
+        display: flex;
+        width: 20px;
+        height: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .social ul li a:hover {
+        background: #009CC2;
+        cursor: pointer;
+    }
+    
+    .RappresentGroup {
+        height: 842px;
+        width: 1600px;
+        margin: 0 auto;
+        background: #FFFFFF;
+    }
+    
+    .Rappresent {
+        width: 1600px;
+        display: flex;
+        justify-content: space-between;
+        padding: 120px 0 140px 0;
+    }
+    
+    .Implement {
+        height: 842px;
+        width: 1600px;
+        margin: 0 auto;
+        background: #FFFFFF;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .Rappresent1,
+    .Rappresent2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .Rappresent1 {
+        padding: 0 124px 0 269px;
+    }
+    
+    .Rappresent2 {
+        padding: 0 269px 0 124px;
+    }
+    
+    .Rappresent1 h2 {
+        font-family: Roboto, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: uppercase;
+        color: #373737;
+        padding: 0 0 20px 0;
+        width: 383px;
+        letter-spacing: 1px;
+    }
+    
+    .Rappresent1 p {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        color: #4E4E4E;
+        width: 407px;
+    }
+    
+    .getStarted button p {
+        font-family: Roboto, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+    }
+    
+    .getStarted button {
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .getStarted button:hover {
+        background: #009CC2;
+        cursor: pointer;
+    }
+    
+    strong {
+        font: revert;
+    }
+    
+    .OurCommunityAll {
+        height: 504px;
+        width: 1600px;
+        margin: 0 auto;
+        background: #F5F6F7;
+    }
+    
+    .OurCommunity {
+        width: 1600px;
+        display: flex;
+        justify-content: space-between;
+        padding: 82px 0 140px 0;
+    }
+    
+    .OurCommunity .Rappresent1 h2 {
+        font-family: Roboto, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: #373737;
+        padding: 0 0 10px 0;
+    }
+    
+    .OurCommunity .Rappresent1 p {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        color: #373737;
+        width: 298px;
+    }
+    
+    .OurCommunityPhoto {
+        height: 244px;
+        width: 894px;
+        background: #FFFFFF;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .cropPhoto {
+        overflow: hidden;
+    }
+    
+    .OurCommunityPhoto img {
+        flex-direction: column;
+        margin: 0 30px 0 0;
+    }
+    
+    .elements {
+        display: flex;
+        justify-content: space-between;
+        width: 83px;
+        height: 18px;
+        padding: 0 200px 20px 543px;
+    }
+    
+    .elements1,
+    .elements2,
+    .elements3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .elements1 img:hover,
+    .elements3 img:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
+    
+    .el {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 100%;
+        color: #373737;
+    }
+    
+    .elementsGroup {
+        display: flex;
+        justify-content: space-between;
+        width: 37px;
+    }
+    
+    .SignUp {
+        height: 524px;
+        width: 1600px;
+        margin: 0 auto;
+        background: #FFFFFF;
+        background: url(./assets/pexels-christina-morillo-1181675\ 1.png);
+    }
+    
+    .SignUpChild1 h2 {
+        color: #FFFFFF;
+        font-family: Roboto, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: uppercase;
+        width: 383px;
+        letter-spacing: 1px;
+    }
+    
+    input {
+        width: 290px;
+        height: 46px;
+        padding: 0px 25px;
+        background: #FFFFFF;
+        margin: 0 0 0 0;
+        border: none;
+    }
+    
+    .SignUpChild {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .SignUpChild1 {
+        display: flex;
+        justify-content: center;
+        padding: 200px 0 30px;
+    }
+    
+    .SignUpChild2 {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .mainSignUpChild22 {
+        width: 66px;
+        height: 46px;
+        padding: 0px 0px;
+        background: #00AFDB;
+        margin: 0 0;
+        border: none;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .mainSignUpChild2 {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .mainSignUpChild21 {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .mainSignUpChild22 img {
+        padding: 15px;
+    }
+    
+    .mainSignUpChild22:hover {
+        background: #009CC2;
+        cursor: pointer;
+    }
+    
+    .Download {
+        background: #FFFFFF;
+        height: 345px;
+        width: 1600px;
+        margin: 0 auto;
+    }
+    
+    div.DownloadAll.DownloadChild1 h2 {
+        color: #373737;
+        font-family: Roboto, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: uppercase;
+        width: 251px;
+        letter-spacing: 1px;
+        margin: 120px 0px 0px 116px;
+    }
+    
+    .DownloadAll {
+        width: 480px;
+        margin: 0 auto;
+    }
+    
+    .DownloadChild2Button1All {
+        width: 402px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .DownloadChild2Button1,
+    .DownloadChild2Button2 {
+        display: flex;
+        justify-content: center;
+    }
+    
+    div.DownloadAll.DownloadChild1 p {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        color: #4E4E4E;
+        width: 480px;
+        margin: 21px 0px 30px 0px;
+        text-align: center;
+    }
+    
+    div.DownloadAll2.DownloadChild2 {
+        display: flex;
+        justify-content: space-between;
+        width: 432px;
+        margin: 0 auto;
+    }
+    
+    div.DownloadChild2Button1All.DownloadChild2Button1 a button,
+    div.DownloadChild2Button1All.DownloadChild2Button2 a button {
+        /* width: 186px; */
+        height: 46px;
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        background: white;
+    }
+    
+    div.DownloadChild2Button1All.DownloadChild2Button1 a button p,
+    div.DownloadChild2Button1All.DownloadChild2Button2 a button p {
+        font-family: Roboto, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        padding: 15px;
+    }
+    
+    div.DownloadChild2Button1All.DownloadChild2Button2 a button img {}
+    
+    .downloadIcon {
+        width: 59px;
+        height: 46px;
+        background: #009CC2;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .pDownload {
+        width: 127px;
+        background: #00AFDB;
+        height: 46px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .downloadIcon:hover {
+        width: 59px;
+        height: 46px;
+        background: #009CC2;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    .pDownload:hover {
+        width: 127px;
+        background: #009CC2;
+        height: 46px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    .Footer {
+        background: #000000;
+        height: 185px;
+        width: 1600px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .detailsfooter p,
+    .linefooter {
+        color: #818181;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        /* width: 480px; */
+        /* margin: 21px 0px 30px 0px; */
+        text-align: center;
+    }
+    
+    .navfooter,
+    .logofooter,
+    .detailsfooter {
+        display: flex;
+        text-decoration: none;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .navf {}
+    
+    .textLineF,
+    .linefooter {}
+    
+    .navf ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 0px 21px 160px;
+        width: 236px;
+    }
+    
+    .navf ul li a {
+        display: flex;
+        height: 20px;
+        color: #FFFFFF;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration: none;
+    }
+    
+    .logofooter {
+        padding: 0px 66px 22px 10px;
+    }
+    
+    .detailsfooter {
+        padding: 0px 160px 23px 10px;
+    }
