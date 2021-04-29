@@ -1,9 +1,6 @@
 # Projects RSS-JS
 @mariyafrantsava
 
-### CV: 
-+ Demo: [https://rolling-scopes-school.github.io/mariyafrantsava-JS2020Q3/Git%20%26%20HTML%20%26%20CSS]
-
 ### webdev: 
 + Demo: [https://rolling-scopes-school.github.io/mariyafrantsava-JS2020Q3/webdev]
 
